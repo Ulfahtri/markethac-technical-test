@@ -2,6 +2,8 @@
 
 ## 1. Membuat base tabel 
 
+Base tabel berisi kolom-kolom yang menyajikan informasi mengenai penjualan 
+
 ```
 CREATE TABLE markethac.report_monthly_orders_product_base AS
 SELECT 
