@@ -1,3 +1,4 @@
+-- Create markethac.report_monthly_orders_product_base table --
 CREATE TABLE markethac.report_monthly_orders_product_base AS
 SELECT 
     od.order_id,
@@ -17,6 +18,7 @@ INNER JOIN
 WHERE 
     od.status != 'Returned';
 
+-- Create markethac.report_monthly_orders_product_agg table --
 CREATE TABLE markethac.report_monthly_orders_product_agg AS
 SELECT
     year,
@@ -33,6 +35,7 @@ FROM
 GROUP BY
     month, year, category, name, brand;
 
+-- Select the top product based on profit for each month in 2024 --
 SELECT
     year,
     month,
